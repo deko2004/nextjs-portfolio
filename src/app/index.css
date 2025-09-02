@@ -1,0 +1,36 @@
+@import "tailwindcss";
+@import "./styles/utils.css";
+
+:root {
+  /* Primary Colors */
+  --primary-color: #9333ea; /* purple-600 */
+  --primary-light: #a855f7; /* purple-500 */
+  --primary-dark: #7e22ce; /* purple-700 */
+
+  /* Tailwind Custom Colors */
+  --color-primary: #9333ea;
+  --color-primary-light: #a855f7;
+  --color-primary-dark: #7e22ce;
+
+  /* Background Colors */
+  --bg-primary: #121212; /* gray-900 */
+  --bg-secondary: #262626; /* gray-800 */
+  --bg--sechover: #404040;
+  /* Text Colors */
+  --text-primary: #f9fafb; /* gray-50 */
+  --text-secondary: #e5e7eb; /* gray-200 */
+
+  /* Border Colors */
+  --border-color: #374151; /* gray-700 */
+
+  /* Additional Colors */
+  --white: #ffffff;
+  --black: #000000;
+  --gray-700: #374151;
+  --gray-800: #1f2937;
+  --gray-900: #111827;
+
+  /* Component-specific Colors */
+  --swiper-bullet-bg: #ffffff;
+  --swiper-bullet-active-bg: var(--primary-color);
+}

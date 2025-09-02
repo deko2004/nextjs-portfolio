@@ -1,0 +1,103 @@
+/* Utility classes using CSS variables */
+
+/* Background Colors */
+.bg-primary {
+  background-color: var(--bg-primary);
+}
+
+.bg-secondary {
+  background-color: var(--bg-secondary);
+}
+
+.bg-gradient-primary {
+  background-image: linear-gradient(
+    to right,
+    var(--primary-light),
+    var(--primary-dark)
+  );
+}
+
+.bg-gradient-primary-vertical {
+  background-image: linear-gradient(to bottom, var(--bg-primary), var(--black));
+}
+
+/* Text Colors */
+.text-primary-color {
+  color: var(--primary-color);
+}
+
+.text-primary-light {
+  color: var(--primary-light);
+}
+
+.text-primary-dark {
+  color: var(--primary-dark);
+}
+
+.text-primary {
+  color: var(--text-primary);
+}
+
+.text-secondary {
+  color: var(--text-secondary);
+}
+
+/* Border Colors */
+.border-primary {
+  border-color: var(--primary-color);
+}
+
+.border-primary-light {
+  border-color: var(--primary-light);
+}
+
+.border-primary-dark {
+  border-color: var(--primary-dark);
+}
+
+.border-color {
+  border-color: var(--border-color);
+}
+
+/* Gradient Text */
+.text-gradient-primary {
+  background-image: linear-gradient(
+    to right,
+    var(--primary-light),
+    var(--primary-color)
+  );
+  background-clip: text;
+  color: transparent;
+}
+
+/* Focus States */
+.focus-primary:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+/* Hover States */
+.hover-bg-primary:hover {
+  background-color: var(--primary-color);
+}
+
+.hover-bg-primary-dark:hover {
+  background-color: var(--primary-dark);
+}
+
+.hover-border-primary:hover {
+  border-color: var(--primary-color);
+}
+
+.hover-text-primary:hover {
+  color: var(--primary-color);
+}
+
+/* Shadow */
+.shadow-primary {
+  box-shadow: 0 4px 14px rgba(147, 51, 234, 0.3);
+}
+
+.hover-shadow-primary:hover {
+  box-shadow: 0 6px 20px rgba(147, 51, 234, 0.5);
+}

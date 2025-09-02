@@ -1,0 +1,20 @@
+{
+  "ci": {
+    "collect": {
+      "url": [
+        "https://hamoudicode.vercel.app/",
+        "https://hamoudicode.vercel.app/about",
+        "https://hamoudicode.vercel.app/projects",
+        "https://hamoudicode.vercel.app/contact",
+        "https://hamoudicode.vercel.app/services"
+      ],
+      "numberOfRuns": 1
+    },
+    "assert": {
+      "preset": "lighthouse:recommended"
+    },
+    "upload": {
+      "target": "temporary-public-storage"
+    }
+  }
+}

@@ -1,0 +1,9 @@
+# Main SEO rules for portfolio
+# Allow all bots to index and follow
+# Disallow nothing
+# Sitemap location is set for better crawling
+
+User-agent: *
+Allow: /
+
+Sitemap: https://hamoudicode.vercel.app/sitemap.xml
