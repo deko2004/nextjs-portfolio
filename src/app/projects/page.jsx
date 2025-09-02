@@ -12,6 +12,7 @@ export default function Projects() {
       category: "web",
       image: "/assets/animee.webp",
       featured: true,
+
       link: "https://another-anime-app.vercel.app/",
       description:
         "Interactive anime web application with search functionality and user profiles.",
@@ -24,6 +25,7 @@ export default function Projects() {
       category: "ecommerce",
       image: "/assets/tshop.webp",
       featured: true,
+
       link: "https://tshopone.netlify.app/",
       description:
         "Modern e-commerce platform for trendy fashion and accessories.",
@@ -35,7 +37,8 @@ export default function Projects() {
       category: "web",
       image: "/assets/dcrypto.webp",
       featured: true,
-      link: "https://jjtrading.site/",
+
+      link: "https://multiverse.ltd/",
       description:
         "Real-time cryptocurrency tracking and portfolio management application.",
       tags: [
@@ -49,21 +52,46 @@ export default function Projects() {
     },
     {
       id: 4,
+      title: "Customizable Landing",
+      category: "web",
+      image: "/assets/yotalanding.webp",
+      featured: true,
+      link: "https://yotalanding.vercel.app",
+      description:
+        "Modern and customizable landing page platform with multiple mode, built with Next.js and Tailwind CSS. Features responsive design and theme customization.",
+      tags: ["Next.js", "TS", "Tailwind", "React"],
+    },
+    {
+      id: 5,
       title: "TeckShop",
       category: "ecommerce",
       image: "/assets/store.webp",
       featured: false,
+
       link: "https://teckshop.fwh.is/",
       description:
         "Full-featured tech e-commerce store with product reviews and comparisons.",
       tags: ["React", "Tailwind", "PHP", "MySQL"],
     },
+
     {
-      id: 5,
+      id: 6,
+      title: "DekoFlix",
+      category: "web",
+      image: "/assets/nclone.webp",
+      featured: false,
+
+      link: "https://dekoflix.netlify.app/",
+      description: "Premium streaming service for movies and TV shows.",
+      tags: ["React", "Tailwind", "API"],
+    },
+    {
+      id: 7,
       title: "ToShop",
       category: "ecommerce",
       image: "/assets/toshop.webp",
       featured: false,
+
       link: "https://toshop-deko.netlify.app/",
       description:
         "Premium shopping experience with intuitive navigation and secure checkout.",

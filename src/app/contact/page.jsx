@@ -1,6 +1,73 @@
 "use client";
-import { useState } from "react";
-import { Mail, Instagram, Linkedin, Github } from "lucide-react";
+import { useState, useRef } from "react";
+import emailjs from "@emailjs/browser";
+import {
+  Mail,
+  Instagram,
+  Linkedin,
+  Github,
+  CheckCircle,
+  X,
+} from "lucide-react";
+const serviceID = process.env.NEXT_PUBLIC_EMAIL_SERVICE_KEY;
+const templateID = process.env.NEXT_PUBLIC_EMAIL_TEMPLATE_KEY;
+const publicKey = process.env.NEXT_PUBLIC_EMAIL_PUBLIC_KEY;
+
+// Success Modal Component
+const SuccessModal = ({ isVisible, onClose }) => {
+  if (!isVisible) return null;
+
+  return (
+    <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50 animate-fadeIn">
+      <div className="bg-secondary border border-gray-600 rounded-2xl p-8 max-w-md mx-4 relative animate-scaleIn">
+        {/* Close Button */}
+        <button
+          onClick={onClose}
+          className="absolute top-4 right-4 text-gray-400 hover:text-white transition-colors"
+        >
+          <X size={20} />
+        </button>
+
+        {/* Success Animation */}
+        <div className="text-center">
+          <div className="relative mb-6">
+            <div className="animate-bounce">
+              <CheckCircle
+                size={64}
+                className="text-green-500 mx-auto animate-pulse"
+              />
+            </div>
+            {/* Ripple Effect */}
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="w-16 h-16 border-2 border-green-500/30 rounded-full animate-ping"></div>
+            </div>
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div
+                className="w-20 h-20 border-2 border-green-500/20 rounded-full animate-ping"
+                style={{ animationDelay: "0.5s" }}
+              ></div>
+            </div>
+          </div>
+
+          <h3 className="text-2xl font-bold text-white mb-2">
+            Message Sent Successfully!
+          </h3>
+          <p className="text-gray-300 mb-6">
+            Thank you! Your message has been sent successfully and I will get
+            back to you soon.
+          </p>
+
+          <button
+            onClick={onClose}
+            className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-xl transition-all duration-200 font-medium hover:scale-105"
+          >
+            OK
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+};
 
 // ContactCard Component
 const ContactCard = ({
@@ -86,6 +153,9 @@ export default function Contact() {
     email: "",
     message: "",
   });
+  const [loading, setLoading] = useState(false);
+  const [showSuccessModal, setShowSuccessModal] = useState(false);
+  const formRef = useRef();
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -94,10 +164,38 @@ export default function Contact() {
       [name]: value,
     }));
   };
-
   const handleSubmit = () => {
-    console.log("Form submitted:", formData);
-    alert("Message sent! (This is a demo)");
+    // تحقق من الحقول
+    if (
+      !formData.name.trim() ||
+      !formData.email.trim() ||
+      !formData.message.trim()
+    ) {
+      alert("Please fill in all fields before sending.");
+      return;
+    }
+
+    // تحقق من صحة البريد
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(formData.email)) {
+      alert("Please enter a valid email address.");
+      return;
+    }
+
+    setLoading(true);
+
+    emailjs
+      .send(serviceID, templateID, formData, publicKey)
+      .then(
+        (result) => {
+          setShowSuccessModal(true);
+          setFormData({ name: "", email: "", message: "" });
+        },
+        (error) => {
+          alert("An error occurred while sending: " + error.text);
+        }
+      )
+      .finally(() => setLoading(false));
   };
 
   // Social media data
@@ -119,8 +217,6 @@ export default function Contact() {
       title: "Follow My Journey",
       description:
         "Stay updated with my latest posts and stories on Instagram.",
-      //   href: "mailto:hamoudicode9@gmail.com",
-
       icon: <Instagram size={24} className="text-white" />,
       backgroundIcon: <Instagram size={80} />,
       gradientClasses:
@@ -134,7 +230,6 @@ export default function Contact() {
       title: "Let's Connect",
       description:
         "Connect for collaboration or explore my professional experience.",
-      // href: "https://linkedin.com",
       icon: <Linkedin size={24} className="text-white" />,
       backgroundIcon: <Linkedin size={80} />,
       gradientClasses: "bg-gradient-to-br from-blue-600 to-blue-700",
@@ -146,7 +241,6 @@ export default function Contact() {
       name: "Tiktok",
       title: "Join the Fun",
       description: "Follow me on TikTok for entertaining and engaging content.",
-      // href: "https://tiktok.com",
       icon: (
         <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
           <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z" />
@@ -256,15 +350,53 @@ export default function Contact() {
               <div className="flex justify-center">
                 <button
                   onClick={handleSubmit}
+                  disabled={loading}
                   className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-xl transition-all duration-200 font-medium text-lg hover:scale-105 hover:shadow-lg"
                 >
-                  Send Email
+                  {loading ? "Sending..." : "Send Email"}
                 </button>
               </div>
             </div>
           </div>
         </div>
       </div>
+
+      {/* Success Modal */}
+      <SuccessModal
+        isVisible={showSuccessModal}
+        onClose={() => setShowSuccessModal(false)}
+      />
+
+      {/* Custom Animations */}
+      <style jsx>{`
+        @keyframes fadeIn {
+          from {
+            opacity: 0;
+          }
+          to {
+            opacity: 1;
+          }
+        }
+
+        @keyframes scaleIn {
+          from {
+            opacity: 0;
+            transform: scale(0.8) translateY(20px);
+          }
+          to {
+            opacity: 1;
+            transform: scale(1) translateY(0);
+          }
+        }
+
+        .animate-fadeIn {
+          animation: fadeIn 0.3s ease-out;
+        }
+
+        .animate-scaleIn {
+          animation: scaleIn 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+      `}</style>
     </>
   );
 }
