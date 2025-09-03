@@ -11,6 +11,8 @@ const nextConfig = {
   },
   experimental: {
     appDir: true,
+    legacyBrowsers: false,
+    browsersListForSwc: true,
   },
 };
 const securityHeaders = [
