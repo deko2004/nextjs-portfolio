@@ -25,4 +25,7 @@ export const metadata = {
       "Web & eCommerce projects developed with modern technologies by Hamoudi Brh.",
     images: ["https://hamoudibrh.vercel.app/assets/avatar1.webp"],
   },
+  alternates: {
+    canonical: "https://hamoudibrh.vercel.app/projects",
+  },
 };

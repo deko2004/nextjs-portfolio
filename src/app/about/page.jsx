@@ -21,6 +21,9 @@ export const metadata = {
     locale: "en_US",
     type: "website",
   },
+  alternates: {
+    canonical: "https://hamoudibrh.vercel.app/about",
+  },
 };
 
 import { Briefcase, MapPin, Calendar, Clock } from "lucide-react";
