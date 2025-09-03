@@ -2,14 +2,29 @@
 const securityHeaders = [
   {
     key: "Content-Security-Policy",
-    value: "default-src 'self'; script-src 'self'; object-src 'none';",
+    value: `
+      default-src 'self';
+      script-src 'self' 'unsafe-inline';
+      style-src 'self' 'unsafe-inline';
+      img-src 'self' data: https:;
+      font-src 'self' https: data:;
+      object-src 'none';
+      base-uri 'self';
+      frame-ancestors 'none';
+    `.replace(/\n/g, " "),
   },
   {
     key: "Strict-Transport-Security",
     value: "max-age=63072000; includeSubDomains; preload",
   },
-  { key: "Cross-Origin-Opener-Policy", value: "same-origin" },
-  { key: "X-Frame-Options", value: "DENY" },
+  {
+    key: "Cross-Origin-Opener-Policy",
+    value: "same-origin",
+  },
+  {
+    key: "X-Frame-Options",
+    value: "DENY",
+  },
 ];
 
 const nextConfig = {
