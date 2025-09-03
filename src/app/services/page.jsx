@@ -25,9 +25,6 @@ export const metadata = {
       "Professional web services by Hamoudi Brh: responsive websites, APIs, testing, and backend systems.",
     images: ["https://hamoudibrh.vercel.app/assets/avatar1.webp"],
   },
-  alternates: {
-    canonical: "https://hamoudibrh.vercel.app/services",
-  },
 };
 
 import {

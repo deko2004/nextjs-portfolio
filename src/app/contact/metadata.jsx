@@ -37,7 +37,4 @@ export const metadata = {
       "Get in touch with Hamoudi Brh for collaborations or questions.",
     images: ["/assets/avatar1.webp"],
   },
-  alternates: {
-    canonical: "https://hamoudibrh.vercel.app/contact",
-  },
 };
