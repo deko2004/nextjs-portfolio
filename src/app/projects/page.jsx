@@ -2,7 +2,7 @@
 
 import dynamic from "next/dynamic";
 import Link from "next/link";
-const ProjectCard = dynamic(() => import("./projectCard"));
+const ProjectCard = dynamic(() => import("./projectCard"), { ssr: false });
 import projects from "@/data/projects.data";
 export default function Projects() {
   return (

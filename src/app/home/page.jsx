@@ -1,10 +1,15 @@
 "use client";
-import { MapPin, Circle, Code2, Briefcase, Sparkles, Mail } from "lucide-react";
+import dynamic from "next/dynamic";
 import Link from "next/link";
 
 // كومبوننت الأنيميشن المحسن والمتجاوب
-import MyAnimationLazy from "./MyAnimationLazy";
+const MyAnimationLazy = dynamic(() => import("./MyAnimationLazy"), {
+  ssr: false,
+});
+
 import skills from "@/lib/skillsicons";
+import { MapPin, Circle, Code2, Briefcase, Sparkles, Mail } from "lucide-react";
+
 export default function Home() {
   return (
     <>

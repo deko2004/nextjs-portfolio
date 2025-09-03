@@ -47,6 +47,8 @@ export default function PortfolioAside() {
               loading="lazy"
               alt="Hamoudi Brh"
               className="w-20 h-20 rounded-full object-cover"
+              priority={false}
+              sizes="80px"
             />
           </div>
 

@@ -1,7 +1,14 @@
 "use client";
 import { useEffect, useState } from "react";
-import Lottie from "lottie-react";
-import animationData from "../../public/assets/laptopanimation.json";
+import dynamic from "next/dynamic";
+
+// Lazy load the shared animation component to reduce bundle size
+const LaptopAnimation = dynamic(() => import("./LaptopAnimation"), {
+  ssr: false,
+  loading: () => (
+    <div className="w-40 h-40 bg-gray-800 rounded-lg animate-pulse" />
+  ),
+});
 
 export default function LoadingOverlay({ show }) {
   const [visible, setVisible] = useState(show);
@@ -27,7 +34,7 @@ export default function LoadingOverlay({ show }) {
         aria-live="polite"
       >
         <div className="w-40 h-40">
-          <Lottie animationData={animationData} autoplay loop />
+          <LaptopAnimation />
         </div>
       </div>
     )

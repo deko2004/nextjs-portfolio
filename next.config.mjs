@@ -1,20 +1,4 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  images: {
-    domains: [], // Add any external image domains here
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "**",
-      },
-    ],
-  },
-  experimental: {
-    appDir: true,
-    legacyBrowsers: false,
-    browsersListForSwc: true,
-  },
-};
 const securityHeaders = [
   {
     key: "Content-Security-Policy",
@@ -24,14 +8,43 @@ const securityHeaders = [
     key: "Strict-Transport-Security",
     value: "max-age=63072000; includeSubDomains; preload",
   },
-  {
-    key: "Cross-Origin-Opener-Policy",
-    value: "same-origin",
-  },
-  {
-    key: "X-Frame-Options",
-    value: "DENY",
-  },
+  { key: "Cross-Origin-Opener-Policy", value: "same-origin" },
+  { key: "X-Frame-Options", value: "DENY" },
 ];
+
+const nextConfig = {
+  reactStrictMode: true,
+  poweredByHeader: false,
+  compress: true,
+
+  images: {
+    formats: ["image/avif", "image/webp"],
+    minimumCacheTTL: 60,
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "**",
+      },
+    ],
+  },
+
+  modularizeImports: {
+    "react-icons/?(((\\w*)?/?)*)": {
+      transform: "react-icons/{{ matches.[1] }}/{{member}}",
+    },
+    "lucide-react": {
+      transform: "lucide-react/dist/esm/icons/{{member}}",
+    },
+  },
+
+  async headers() {
+    return [
+      {
+        source: "/(.*)",
+        headers: securityHeaders,
+      },
+    ];
+  },
+};
 
 export default nextConfig;
