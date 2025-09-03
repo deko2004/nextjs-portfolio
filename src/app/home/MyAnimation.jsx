@@ -1,4 +1,4 @@
-import laptop from "@/assets/laptopanimation.json";
+import laptop from "@/public/assets/laptopanimation.json";
 import Lottie from "lottie-react";
 
 const MyAnimation = () => {

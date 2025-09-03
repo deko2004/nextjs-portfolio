@@ -6,4 +6,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://hamoudicode.vercel.app/sitemap.xml
+Sitemap: https://hamoudibrh.vercel.app/sitemap.xml

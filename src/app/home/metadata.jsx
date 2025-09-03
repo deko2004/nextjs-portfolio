@@ -20,7 +20,7 @@ export const metadata = {
     title: "Hamoudi Brh | Full Stack Developer & Web Engineer",
     description:
       "Discover the portfolio and skills of Hamoudi Brh, a Full Stack developer skilled in React, Next.js, Tailwind CSS, Node.js and more.",
-    url: "https://hamoudicode.vercel.app", // غيّرها إلى رابط موقعك
+    url: "https://hamoudibrh.vercel.app", // غيّرها إلى رابط موقعك
     siteName: "Hamoudi Brh Portfolio",
     images: [
       {

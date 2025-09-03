@@ -17,7 +17,7 @@ export const metadata = {
     title: "Contact Me | Hamoudi Brh - full stack Developer",
     description:
       "Connect with Hamoudi Brh via email or social media. Let's build something great together!",
-    url: "https://hamoudicode.vercel.app/contact",
+    url: "https://hamoudibrh.vercel.app/contact",
     siteName: "Hamoudi Brh Portfolio",
     images: [
       {

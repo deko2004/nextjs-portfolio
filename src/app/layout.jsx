@@ -5,16 +5,16 @@ export const metadata = {
   title: "Portfolio of Hamoudi Benrahal | بورتفوليو حمودي بن رحال",
   description:
     "Portfolio of Hamoudi Benrahal, a professional web developer. Explore projects, technologies, and contact information. | بورتفوليو احترافي لعرض المشاريع البرمجية والتقنيات الحديثة باستخدام React وNext.js وTailwind.",
-  metadataBase: new URL("https://hamoudicode.vercel.app"),
+  metadataBase: new URL("https://hamoudibrh.vercel.app"),
   openGraph: {
     title: "Portfolio of Hamoudi Benrahal | بورتفوليو حمودي بن رحال",
     description:
       "Portfolio of Hamoudi Benrahal, a professional web developer. Explore projects, technologies, and contact information. | استعرض أفضل المشاريع البرمجية التي أنجزتها.",
-    url: "https://hamoudicode.vercel.app/",
+    url: "https://hamoudibrh.vercel.app/",
     type: "website",
     images: [
       {
-        url: "https://hamoudicode.vercel.app/assets/avatar1.webp",
+        url: "https://hamoudibrh.vercel.app/assets/avatar1.webp",
         width: 1200,
         height: 630,
         alt: "Hamoudi Benrahal Portfolio Preview",
@@ -26,7 +26,7 @@ export const metadata = {
     title: "Portfolio of Hamoudi Benrahal | بورتفوليو حمودي بن رحال",
     description:
       "Portfolio of Hamoudi Benrahal, a professional web developer. Explore projects, technologies, and contact information. | استعرض أفضل المشاريع البرمجية التي أنجزتها.",
-    images: ["https://hamoudicode.vercel.app/assets/avatar1.webp"],
+    images: ["https://hamoudibrh.vercel.app/assets/avatar1.webp"],
   },
   robots: {
     index: true,
@@ -40,10 +40,10 @@ export const metadata = {
       "@context": "https://schema.org",
       "@type": "WebSite",
       name: "Hamoudi Benrahal Portfolio",
-      url: "https://hamoudicode.vercel.app",
+      url: "https://hamoudibrh.vercel.app",
       potentialAction: {
         "@type": "SearchAction",
-        target: "https://hamoudicode.vercel.app/?q={search_term_string}",
+        target: "https://hamoudibrh.vercel.app/?q={search_term_string}",
         "query-input": "required name=search_term_string",
       },
     }),

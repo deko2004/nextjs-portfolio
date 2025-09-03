@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import Lottie from "lottie-react";
-import animationData from "../assets/laptopanimation.json";
+import animationData from "../../public/assets/laptopanimation.json";
 
 export default function LoadingOverlay({ show }) {
   const [visible, setVisible] = useState(show);

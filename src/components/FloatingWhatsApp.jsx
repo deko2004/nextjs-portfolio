@@ -9,11 +9,11 @@ export const metadata = {
     description:
       "Chat with Hamoudi Benrahal directly on WhatsApp for quick support, collaboration, or inquiries. | تواصل مع حمودي بن رحال مباشرة عبر الواتساب لأي استفسار أو تعاون.",
     type: "website",
-    url: "https://hamoudicode.vercel.app/",
+    url: "https://hamoudibrh.vercel.app/",
     siteName: "Hamoudi Brh Portfolio",
     images: [
       {
-        url: "https://hamoudicode.vercel.app/assets/avatar1.webp",
+        url: "https://hamoudibrh.vercel.app/assets/avatar1.webp",
         width: 800,
         height: 600,
         alt: "Hamoudi Brh - Full Stack Developer",
@@ -25,7 +25,7 @@ export const metadata = {
     title: "WhatsApp Chat | Portfolio of Hamoudi Benrahal | تواصل واتساب",
     description:
       "Chat with Hamoudi Benrahal directly on WhatsApp for quick support, collaboration, or inquiries. | تواصل مع حمودي بن رحال مباشرة عبر الواتساب لأي استفسار أو تعاون.",
-    images: ["https://hamoudicode.vercel.app/assets/avatar1.webp"],
+    images: ["https://hamoudibrh.vercel.app/assets/avatar1.webp"],
   },
 };
 

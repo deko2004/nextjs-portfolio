@@ -16,8 +16,8 @@ export default function Head() {
             "@context": "https://schema.org",
             "@type": "Person",
             name: "Hamoudi Benrahal",
-            url: "https://hamoudicode.vercel.app",
-            image: "https://hamoudicode.vercel.app/assets/avatar1.webp",
+            url: "https://hamoudibrh.vercel.app",
+            image: "https://hamoudibrh.vercel.app/assets/avatar1.webp",
             jobTitle: "Full-Stack Web Developer",
             sameAs: [
               "https://github.com/deko2004",

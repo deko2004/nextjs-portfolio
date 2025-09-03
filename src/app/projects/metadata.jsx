@@ -6,11 +6,11 @@ export const metadata = {
     title: "Projects | Hamoudi Brh - Full Stack Developer",
     description:
       "Discover featured and open-source web applications developed by Hamoudi Brh using modern tech stacks.",
-    url: "https://hamoudicode.vercel.app/projects",
+    url: "https://hamoudibrh.vercel.app/projects",
     siteName: "Hamoudi Brh Portfolio",
     images: [
       {
-        url: "https://hamoudicode.vercel.app/assets/avatar1.webp",
+        url: "https://hamoudibrh.vercel.app/assets/avatar1.webp",
         width: 800,
         height: 600,
         alt: "Hamoudi Brh Portfolio",
@@ -23,6 +23,6 @@ export const metadata = {
     title: "Projects | Hamoudi Brh",
     description:
       "Web & eCommerce projects developed with modern technologies by Hamoudi Brh.",
-    images: ["https://hamoudicode.vercel.app/assets/avatar1.webp"],
+    images: ["https://hamoudibrh.vercel.app/assets/avatar1.webp"],
   },
 };

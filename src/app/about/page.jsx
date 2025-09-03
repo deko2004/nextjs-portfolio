@@ -16,7 +16,7 @@ export const metadata = {
     title: "About | Hamoudi Brh",
     description:
       "Full s developer and CS student from Setif. Learn more about his background, skills, and projects.",
-    url: "https://hamoudicode.vercel.app/about", // ← عدّل هذا إلى دومينك الحقيقي
+    url: "https://hamoudibrh.vercel.app/about", // ← عدّل هذا إلى دومينك الحقيقي
     siteName: "Hamoudi Brh Portfolio",
     locale: "en_US",
     type: "website",
