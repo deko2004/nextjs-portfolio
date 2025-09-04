@@ -1,7 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
-import LoadingOverlay from "../components/LoadingOverlay";
 import Aside from "../components/aside";
 import dynamic from "next/dynamic";
 
@@ -21,7 +20,6 @@ export default function ClientLayout({ children }) {
 
   return (
     <>
-      <LoadingOverlay show={loading} />
       <div className="MainApp min-h-screen bg-primary flex relative">
         <Aside />
         <div
