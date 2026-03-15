@@ -44,12 +44,6 @@ const nextConfig = {
   },
 
   modularizeImports: {
-    "react-icons/?(((\\w*)?/?)*)": {
-      transform: "react-icons/{{ matches.[1] }}/{{member}}",
-    },
-    "lucide-react": {
-      transform: "lucide-react/dist/esm/icons/{{member}}",
-    },
   },
 
   async headers() {
