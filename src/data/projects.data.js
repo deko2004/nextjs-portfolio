@@ -1,6 +1,18 @@
 export const projects = [
   {
     id: 1,
+    title: "DekuStore",
+    category: "ecommerce",
+    image: "/assets/dekueco.vercel.app_en.webp",
+    featured: true,
+    link: "https://dekueco.vercel.app/",
+    description:
+      "E-commerce web application with product and category management, order dashboard, guest checkout with tracking code, and optional user accounts to track orders.",
+    tags: ["Next.js", "Tailwind", "TS"],
+    gradient: "from-gray-800 to-primary",
+  },
+  {
+    id: 2,
     title: "Master Code",
     category: "web",
     image: "/assets/master.webp",
@@ -12,7 +24,7 @@ export const projects = [
     gradient: "from-gray-800 to-primary",
   },
   {
-    id: 2,
+    id: 3,
     title: "Anime Web",
     category: "web",
     image: "/assets/animee.webp",
@@ -25,7 +37,7 @@ export const projects = [
     gradient: "from-gray-800 to-primary",
   },
   {
-    id: 3,
+    id: 4,
     title: "TShop",
     category: "ecommerce",
     image: "/assets/tshop.webp",
@@ -37,7 +49,7 @@ export const projects = [
     tags: ["React", "Tailwind", "ReactRouter"],
   },
   {
-    id: 4,
+    id: 5,
     title: "D-Crypto App",
     category: "web",
     image: "/assets/dcrypto.webp",
@@ -56,7 +68,7 @@ export const projects = [
     ],
   },
   {
-    id: 5,
+    id: 6,
     title: "Customizable Landing",
     category: "web",
     image: "/assets/yotalanding.webp",
@@ -67,7 +79,7 @@ export const projects = [
     tags: ["Next.js", "TS", "Tailwind", "React"],
   },
   {
-    id: 6,
+    id: 7,
     title: "TeckShop",
     category: "ecommerce",
     image: "/assets/store.webp",
@@ -80,7 +92,7 @@ export const projects = [
   },
 
   {
-    id: 7,
+    id: 8,
     title: "DekoFlix",
     category: "web",
     image: "/assets/nclone.webp",
@@ -91,7 +103,7 @@ export const projects = [
     tags: ["React", "Tailwind", "API"],
   },
   {
-    id: 8,
+    id: 9,
     title: "ToShop",
     category: "ecommerce",
     image: "/assets/toshop.webp",
