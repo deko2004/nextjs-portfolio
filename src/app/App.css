@@ -33,9 +33,7 @@ body {
   background: var(--white) !important;
   opacity: 0.3;
 }
-.ba {
-  align-self: auto;
-}
+
 .swiper-pagination-bullet-active {
   opacity: 1 !important;
   background: var(--primary-color) !important;
